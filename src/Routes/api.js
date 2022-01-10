@@ -5,7 +5,7 @@ const UserAuth = require('../middlewares/userAuth');
 const PostController = require('../controller/postController')
 
 router.post('/orders', UserAuth, PostController.all);
-router.get('/orders', UserAuth, PostController.all);
+router.get('/orders', PostController.all);
 
 router.get("/orders/:id", (req, resp) => {
   // Order.findByPk(req.params.id, {
